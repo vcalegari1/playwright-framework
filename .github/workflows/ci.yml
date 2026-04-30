@@ -27,7 +27,9 @@ jobs:
         run: playwright install --with-deps
 
       - name: Run tests
-        run: pytest -v
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: 0
+        run: pytest -v --browser chromium
 
       - name: Upload report
         if: always()
