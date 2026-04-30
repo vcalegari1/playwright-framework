@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(c:/Projects/playwright-framework/venv/Scripts/python.exe -c \"import playwright; print\\(playwright.__version__\\)\")",
+      "Bash(c:/Projects/playwright-framework/venv/Scripts/pip.exe install *)"
+    ]
+  }
+}

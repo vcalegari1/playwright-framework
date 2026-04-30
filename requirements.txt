@@ -1,0 +1,10 @@
+# Python dependencies for the Playwright test framework.
+# Install with: pip install -r requirements.txt
+# Then run: playwright install
+
+pytest==8.3.5
+pytest-playwright==0.7.0
+pytest-html==4.1.1
+pytest-xdist==3.6.1
+anthropic==0.49.0
+python-dotenv==1.0.1
