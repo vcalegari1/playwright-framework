@@ -12,6 +12,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      PLAYWRIGHT_BROWSERS_PATH: /home/runner/.cache/ms-playwright
     steps:
       - uses: actions/checkout@v4
 
@@ -30,8 +32,6 @@ jobs:
         run: python -m playwright install-deps chromium
 
       - name: Run tests
-        env:
-          PLAYWRIGHT_BROWSERS_PATH: 0
         run: pytest -v --browser chromium
 
       - name: Upload report
