@@ -32,6 +32,8 @@ jobs:
         run: python -m playwright install-deps chromium
 
       - name: Run tests
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: pytest -v --browser chromium
 
       - name: Upload report
